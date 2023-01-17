@@ -154,30 +154,38 @@ section#perfil {
 #perfil .container-texto {
     height: 100%;
     text-align: justify;
+    font-size: 1.3rem;
     grid-area: texto;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
     grid-template-areas: 
         "bio"
-        "frase";
+        "cv";
     justify-items: center;
     align-items: center;
 }
 
 #perfil .bio { 
+    grid-area: bio;
     width: 90%;
     height: auto;
     line-height: 2rem;
-    font-size: 1.3rem;
-    grid-area: bio;
 }
-#perfil .frase {
-    font-size: 1.1rem;
-    width: 80%; 
-    /* height: 50%; */
-    grid-area: frase;
+#perfil .cv {
+    grid-area: cv;
+    padding: 1rem;
+}
+
+.cv a {
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.6);
+    color: black;
+    border: 1px solid black;
+    text-transform: uppercase;
+    font-size: 1.5rem;
     font-style: italic;
+    border-radius: .5rem 2rem;
 }
 
 
