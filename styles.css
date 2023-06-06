@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,700&display=swap');
 
 :root {
-    --dark:#393D50; 
-    --beige:#EDE5D8; 
-    --light:#ebebeb; 
-    --brick:#F56457;
-    --slime:#57f59b;
+    --black:#000000; 
+    --nobleBlack:#1e1d2a; 
+    --Maharaja:#3b3954; 
+    --TangentPeriwinkle:#59567d;
+    --StormyHorizon:#7672a7;
+    --EasterEgg:#948fd1;
 }
 
 html, body {
@@ -37,12 +38,14 @@ header {
     width: 100%;
     height: auto;
     padding: 0.8rem 0;
-    background-color: blueviolet;
+    background-color: rgba(138, 43, 226, 0.9);
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid var(--black);
 }
+
+
 
 nav#navbar {
     width: 100%;
@@ -53,7 +56,7 @@ nav#navbar {
 
 .nav-link {
     background-color: whitesmoke;
-    box-shadow: 4px 4px 4px rgba(0, 0,0, 0.4);
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
     color: slateblue;
     font-size: 1.3rem;
     text-decoration: none;
@@ -71,15 +74,17 @@ nav#navbar {
 main {
     height: auto;
     width: 100%;
-    background-color: red;
 }
 
+h1, h2, h3, h4, h5, p {
+    color: white;
+}
 main section{
     width: 100%;
     min-height: 100vh;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    background-color: var(--beige);
+    border-top: 1px solid var(--black);
+    border-bottom: 1px solid var(--black);
+    background-color: rgba(0, 0, 0, 0.8);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -93,13 +98,8 @@ main section{
 
 section#welcome-section {
     padding: 2rem 1rem;
-    background-color: var(--beige);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    row-gap: 10vh;
     text-align: center;
+    row-gap: 10vh;
 }
 
 
@@ -111,11 +111,11 @@ section#welcome-section {
 #welcome-section p {
     font-size: 1.8rem;
     font-weight: 400;
-    color: blueviolet;
+    color: rgba(192, 129, 250, 0.9);
 }
 
 section#perfil {
-    background-color: var(--brick);
+    background-color: var(--nobleBlack);
     padding: 0 10%;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -132,7 +132,8 @@ section#perfil {
 
 
 #perfil .titulo-seccion { 
-    text-shadow: 3px 4px 5px rgb(143, 58, 51);
+    /* text-shadow: 10px 10px 6px var(--black); */
+    text-shadow: 2px 2px 2px rgb(106, 106, 106);
     padding: 2rem;
     grid-area: titulo; 
 }
@@ -147,8 +148,8 @@ section#perfil {
     height: auto;
     object-fit: contain;
     object-position: center center;
-    border-radius: 3rem;
-    box-shadow: 10px 5px 15px brown;
+    border-radius: 10rem;
+    box-shadow: 4px 4px 16px var(--black);
 }
 
 #perfil .container-texto {
@@ -178,10 +179,10 @@ section#perfil {
 }
 /* Style The Dropdown Button */
 .dropbtn {
-    background-color: #904b45;
+    background-color: blueviolet;
     color: white;
     padding: 16px;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     border: none;
     cursor: pointer;
     text-transform: uppercase;
@@ -204,23 +205,23 @@ section#perfil {
   
   /* Links inside the dropdown */
   .dropdown-content a {
-    color: black;
+    color: var(--black);
     padding: 12px 16px;
     text-decoration: none;
     display: block;
   }
   
   /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {background-color: #f1f1f1}
+  .dropdown-content a:hover { background-color: #f1f1f1 }
   
   /* Show the dropdown menu on hover */
   .dropdown:hover .dropdown-content {
-    padding: 1rem;
+    padding: .8rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    row-gap: 2vh;
+    row-gap: .5rem;
   }
   
   /* Change the background color of the dropdown button when the dropdown content is shown */
@@ -231,8 +232,8 @@ section#perfil {
 .cv a {
     padding: 0.5rem;
     background-color: rgba(255, 255, 255, 0.6);
-    color: black;
-    border: 1px solid black;
+    color: var(--black);
+    border: 1px solid var(--black);
     text-transform: uppercase;
     font-size: 1.1rem;
     font-style: italic;
@@ -241,7 +242,7 @@ section#perfil {
 
 
 section#projects {
-    background-color: var(--dark);
+    background-color: var(--Maharaja);
     padding: 5%;
     display: flex;
     flex-direction: column;
@@ -253,7 +254,7 @@ section#projects {
 
 #projects .titulo-seccion { 
     color: white; 
-    text-shadow: 2px 2px 2px black;
+    text-shadow: 2px 2px 2px var(--black);
 }
 #projects .container-proyectos {
     width: 100%;
@@ -291,24 +292,22 @@ section#projects {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
-.project-tile figcaption { text-align: center; }
 
 .project-tile img {
-    width: 100%;
     height: 20rem;
+    width: 100%;
     border-radius: 0 0 1rem 1rem;
     object-fit: cover;
-    /* object-position: center center; */
+    overflow: hidden;
 }
-
-
 
 
 
 section#formacion {
-    background-color: var(--slime);
+    background-color: var(--TangentPeriwinkle);
     padding: 3rem 0rem;
     display: flex;
     flex-direction: column;
@@ -317,13 +316,13 @@ section#formacion {
     row-gap: 7vh;
 }
 
-#formacion .titulo-seccion { text-shadow: 3px 4px 5px seagreen; }
+#formacion .titulo-seccion { text-shadow: 2px 2px 2px var(--black);}
 
 #formacion .container{
     width: 90%;
     height: auto;
     padding: 2rem;
-    border: 1px solid black;
+    border: 1px solid var(--black);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -361,7 +360,7 @@ section#formacion {
 }
 
 .tarjeta-curso a img {
-    border: 4px outset rgb(47, 125, 81); 
+    border: 6px outset #625d95; 
     max-width: 100%;
     height: 10rem;
     object-fit: cover;
@@ -370,13 +369,15 @@ section#formacion {
 
 
 section#contacto {
-    background-color: var(--light);
+    background-color: var(--StormyHorizon);
     padding: 4rem 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     row-gap: 10vh;
 }
+section#contacto .titulo-seccion{ color: var(--black); }
+
 #contacto .container {
     width: 100%;
     display: flex;
@@ -399,18 +400,17 @@ ul#redes {
 }
 
 li.social a{
-    color: blue; 
-    font-size: 1.5rem;
+    color: rgb(37, 15, 98); 
+    font-size: 1.7rem;
     text-decoration: none;
     text-align: center;
     text-transform: capitalize;
-    transition: all 300ms ease;
 }
-li.social a:visited { color: rgb(132, 4, 187); }
-li.social:hover {
-    transition: all 500ms ease;
-    transform: scale(1.1);
-    text-shadow: 6px 6px 5px gray;
+li.social a:visited { color: rgb(43, 1, 83); }
+
+ul#redes li.social:hover {
+    transition: all 300ms ease;
+    transform: scale(1.2);
 } 
 
 .social a .social-icon{
@@ -421,7 +421,7 @@ li.social:hover {
 footer#footer {
     font-size: 1.1rem;
     min-height: 8rem;
-    background-color: #948FD1;
+    background-color: var(--EasterEgg);
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -431,13 +431,15 @@ footer#footer {
 #footer p { 
     margin: 0;
     text-align: center;
+    color: var(--black);
+    font-size: 1.2rem;
 }
 
 #footer a {
+    font-size: 2rem;
     border-radius: 1rem;
     padding: 0.3rem;
-    font-size: 2rem;
-    border: 2px solid black;
+    border: 2px solid var(--black);
     text-decoration: none;
     background-color: aliceblue;
     display: flex;
@@ -480,7 +482,7 @@ footer#footer {
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        border-bottom: 2px solid black;
+        border-bottom: 2px solid var(--black);
         
     }
     
@@ -502,7 +504,6 @@ footer#footer {
     }
     
     section#perfil {
-        background-color: var(--brick);
         padding: 0 5% 20% 5%;
         display: grid;
         grid-template-columns: 1fr;
@@ -518,7 +519,7 @@ footer#footer {
     }
 
     #perfil .titulo-seccion { 
-        text-shadow: 3px 4px 5px rgb(143, 58, 51);
+        text-shadow: 2px 2px 2px rgb(106, 106, 106);
         padding: 1rem;
         grid-area: titulo; 
     }
@@ -544,7 +545,7 @@ footer#footer {
         object-fit: contain;
         object-position: center center;
         border-radius: 3rem;
-        box-shadow: 10px 5px 15px brown;
+        box-shadow: 4px 4px 16px var(--black);
     }
 
     #perfil .bio { 
@@ -627,15 +628,16 @@ footer#footer {
     }
 
     footer#footer {
-        font-size: 2rem;
         min-height: 8rem;
         padding: 1rem;
     }
     
+    #footer p { font-size: 2rem;}
     #footer a {
+        margin: 2rem 0;
         border-radius: 1rem;
         padding: 0.3rem;
-        border: 4px solid black;
+        border: 4px solid var(--black);
         font-size: 5rem;
         text-decoration: none;
         background-color: aliceblue;
