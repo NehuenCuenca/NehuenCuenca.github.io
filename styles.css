@@ -23,11 +23,9 @@ html {
     scroll-behavior: smooth;
 }
 
-*, *:before, *:after {
-    box-sizing: inherit;
-}
+*, *:before, *:after { box-sizing: inherit; }
 
-body {
+body {  
     height: auto;
     min-width: 650px;
 }
@@ -44,8 +42,6 @@ header {
     align-items: center;
     border-bottom: 2px solid var(--black);
 }
-
-
 
 nav#navbar {
     width: 100%;
@@ -65,20 +61,15 @@ nav#navbar {
     padding: 0.3rem 0.5rem;
     transition: all 0.4s ease;
 }
-
-.nav-link:hover { 
-    box-shadow: 7px 6px 2px rgba(0, 0,0, 0.4);
-}
-
+.nav-link:hover { box-shadow: 7px 6px 2px rgba(0, 0,0, 0.4);}
 
 main {
     height: auto;
     width: 100%;
 }
 
-h1, h2, h3, h4, h5, p {
-    color: white;
-}
+h1, h2, h3, h4, h5, p { color: white; }
+
 main section{
     width: 100%;
     min-height: 100vh;
@@ -101,8 +92,6 @@ section#welcome-section {
     text-align: center;
     row-gap: 10vh;
 }
-
-
 #welcome-section > * { margin: 0; }
 #welcome-section h1 {
     font-size: 3.5rem;
@@ -113,6 +102,7 @@ section#welcome-section {
     font-weight: 400;
     color: rgba(192, 129, 250, 0.9);
 }
+
 
 section#perfil {
     background-color: var(--nobleBlack);
@@ -130,10 +120,8 @@ section#perfil {
     align-items: center;
 }
 
-
 #perfil .titulo-seccion { 
-    /* text-shadow: 10px 10px 6px var(--black); */
-    text-shadow: 2px 2px 2px rgb(106, 106, 106);
+    text-shadow: 2px 2px 2px rgb(86, 86, 86);
     padding: 2rem;
     grid-area: titulo; 
 }
@@ -144,7 +132,6 @@ section#perfil {
 }
 .foto img.img-perfil {
     max-width: 100%;
-    /* height: 18rem; */
     height: auto;
     object-fit: contain;
     object-position: center center;
@@ -153,7 +140,6 @@ section#perfil {
 }
 
 #perfil .container-texto {
-    height: 100%;
     text-align: justify;
     font-size: 1.3rem;
     grid-area: texto;
@@ -189,9 +175,7 @@ section#perfil {
   }
   
   /* The container <div> - needed to position the dropdown content */
-  .dropdown {
-    display: inline-block;
-  }
+  .dropdown { display: inline-block; }
   
   /* Dropdown Content (Hidden by Default) */
   .dropdown-content {
@@ -288,7 +272,6 @@ section#projects {
     min-height: 4rem;
     padding: 1rem;
     font-size: 1.3rem;
-    /* text-transform: uppercase; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -442,26 +425,17 @@ footer#footer {
     border: 2px solid var(--black);
     text-decoration: none;
     background-color: aliceblue;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 
 
 @media (max-width: 700px) {  
 
-    section#perfil{
-        padding: 0 5% 20% 5%;
-    }
+    section#perfil{ padding: 0 5% 20% 5%; }
 
-    .project-tile {
-        width: 50%;
-    }
+    .project-tile { width: 50%; }
 
-    .cursos li.tarjeta-curso {
-        width: 45%;
-    }
+    .cursos li.tarjeta-curso { width: 45%; }
 
     li.social {
         width: 45%;
@@ -492,16 +466,11 @@ footer#footer {
         row-gap: 2vh;
     }
     
-    .nav-link {
-        font-size: 1.7rem;
-    }
+    .nav-link { font-size: 1.7rem; }
 
-    .titulo-seccion {
-        font-size: 2.8rem;
-    }
-    #welcome-section p {
-        font-size: 2.2rem;
-    }
+    .titulo-seccion { font-size: 2.8rem; }
+
+    #welcome-section p { font-size: 2.2rem; }
     
     section#perfil {
         padding: 0 5% 20% 5%;
@@ -563,6 +532,10 @@ footer#footer {
         font-style: italic;
     }
 
+    #perfil .cv button.dropbtn { font-size: 2rem; }
+
+    #perfil .cv .dropdown-content a { font-size: 1.6rem; }
+    
     .project-tile {
         width: 55%;
         max-height: 25rem;
@@ -582,7 +555,6 @@ footer#footer {
         min-height: 4rem;
         margin: 1rem 0;
         font-size: 2.3rem;
-        /* text-transform: uppercase; */
         display: flex;
         justify-content: center;
         align-items: center;
@@ -619,13 +591,9 @@ footer#footer {
         text-align: center;
     }
 
-    li.social a{
-        font-size: 2.2rem;
-    }
+    li.social a{ font-size: 2.2rem;}
     
-    .social a .social-icon{
-        font-size: 3rem;
-    }
+    .social a .social-icon { font-size: 3rem; }
 
     footer#footer {
         min-height: 8rem;
@@ -645,5 +613,4 @@ footer#footer {
         justify-content: center;
         align-items: center;
     }
-    
 }
