@@ -12,10 +12,10 @@
 <body>
     <header>
         <nav id="navbar">
-            <a href="#perfil" class="nav-link">perfil</a>
-            <a href="#projects" class="nav-link">proyectos</a>
-            <a href="#formacion" class="nav-link">formacion</a>
-            <a href="#contacto" class="nav-link">contacto</a>
+            <a href="#perfil" class="nav-link" data-seccion="perfil">perfil</a>
+            <a href="#projects" class="nav-link" data-seccion="projects">proyectos</a>
+            <a href="#formacion" class="nav-link" data-seccion="formacion">formacion</a>
+            <a href="#contacto" class="nav-link" data-seccion="contacto">contacto</a>
         </nav>
     </header>
     <main>
@@ -23,7 +23,7 @@
             <h1>Holis, soy Nehuen Cuenca.</h1>
             <p>Y quiero ser desarrollador web 😎.</p>
         </section>
-        <section id="perfil">
+        <section id="perfil" class="revelar">
             <h1 class="titulo-seccion">Mi perfil</h1>
             <div class="foto">
                 <!-- <img class="img-perfil" src="https://xsgames.co/randomusers/avatar.php?g=male" alt="una foto del desarrollador" loading="eager"> -->
@@ -40,7 +40,7 @@
                 </div>
             </div>
         </section>
-        <section id="projects">
+        <section id="projects" class="revelar">
             <h1 class="titulo-seccion">Algunos proyectos</h1>
             <div class="container-proyectos">
                 <figure class="project-tile">
@@ -81,7 +81,7 @@
                 </figure>
             </div>
         </section>
-        <section id="formacion">
+        <section id="formacion" class="revelar">
             <h1 class="titulo-seccion">Formacion</h1>
             <p class="comentario">Mi comienzo con la programacion empieza en la tecnicatura en analista en sistemas, donde mi primer lenguaje de programacion fue Pascal, en el cual aprendí las estructuras de datos, bucles y estructuras de control. Tambien vi pero muy por arriba, HTML, CSS y PHP.</p>
             <p class="comentario">En segundo año, usamos <strong>Delphi</strong> en el cual nos enseñaron mas estructuras de datos, tales como pilas, colas y listas. Lenguaje que tambien usé para hacer mi primer proyecto (trataba de una distribuidora de bebidas).</p>
@@ -119,7 +119,7 @@
                 <p class="comentario"><u>Proximos cursos</u>: C#.</p>
             </div>
         </section>
-        <section id="contacto">
+        <section id="contacto" class="revelar">
             <h3 class="titulo-seccion">Contactame por acá :P</h3>
             <div class="container">
                 <ul id="redes">
@@ -147,4 +147,5 @@
         <a href="https://www.linkedin.com/in/nehuen-cuenca/" target="_blank">👍🏽</a>
     </footer>
 </body>
+<script src="main.js"></script>
 </html>
