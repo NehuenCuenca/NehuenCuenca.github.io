@@ -73,6 +73,7 @@ nav#navbar {
 main {
     height: auto;
     width: 100%;
+    overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, p { color: white; }
@@ -89,13 +90,16 @@ main section{
     align-items: center;
 }
 
+/* https://www.esthersola.com/nth-child-css-ejemplos-practicos/ */
+main section:nth-child(1n+2){ transform: translateX(-50%);}
+main section:nth-child(2n+3){ transform: translateX(50%); }
+
 .revelar {
     opacity: 0;
     filter: blur(5px);
-    transform: translateX(-50%);
     transition: all .5s ease;
 }
-.activo {
+main section.activo {
     transform: translateX(0);
     filter: blur(0);
     opacity: 1;
@@ -634,3 +638,32 @@ footer#footer {
         align-items: center;
     }
 }
+
+/* SCROLLBAR */
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #5E4475 #DFE9EB;
+}
+  
+/* Chrome, Edge and Safari */
+*::-webkit-scrollbar {
+    width: 1rem;
+    width: 1rem;
+}
+*::-webkit-scrollbar-track {
+    border-radius: 1px;
+    background-color: #DFE9EB;
+}
+
+*::-webkit-scrollbar-track:hover { background-color: #B8C0C2; }
+*::-webkit-scrollbar-track:active { background-color: #B8C0C2; }
+
+*::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background-color: #5E4475;
+    border: 2px solid #000000;
+}
+
+*::-webkit-scrollbar-thumb:hover { background-color: #805B9F; }
+*::-webkit-scrollbar-thumb:active { background-color: #6E508A; }
