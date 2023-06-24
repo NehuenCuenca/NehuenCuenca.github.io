@@ -73,7 +73,6 @@ nav#navbar {
 main {
     height: auto;
     width: 100%;
-    overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, p { color: white; }
@@ -90,16 +89,13 @@ main section{
     align-items: center;
 }
 
-/* https://www.esthersola.com/nth-child-css-ejemplos-practicos/ */
-main section:nth-child(1n+2){ transform: translateX(-50%);}
-main section:nth-child(2n+3){ transform: translateX(50%); }
-
 .revelar {
     opacity: 0;
     filter: blur(5px);
     transition: all .5s ease;
+    transform: translateX(-50%);
 }
-main section.activo {
+.activo {
     transform: translateX(0);
     filter: blur(0);
     opacity: 1;
