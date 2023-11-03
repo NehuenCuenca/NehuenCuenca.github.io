@@ -402,6 +402,10 @@ ul#redes {
     row-gap: 2vh;
 }
 
+li.social{
+    transition: all 250ms ease;
+}
+
 li.social a{
     color: rgb(37, 15, 98); 
     font-size: 1.7rem;
@@ -412,7 +416,6 @@ li.social a{
 li.social a:visited { color: rgb(43, 1, 83); }
 
 ul#redes li.social:hover {
-    transition: all 300ms ease;
     transform: scale(1.2);
 } 
 
@@ -477,7 +480,6 @@ footer#footer {
         justify-content: center;
         align-items: center;
         border-bottom: 2px solid var(--black);
-        
     }
     
     nav#navbar { 
